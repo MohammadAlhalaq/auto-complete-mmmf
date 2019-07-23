@@ -1,0 +1,12 @@
+/* just use rem and vh and vw  */
+/* 
+   1rem equals 20px 
+   0.5rem 10px 
+   0.25rem 5px
+*/
+:root {
+    --main-font: font-family: 'Darker Grotesque', sans-serif;
+    --width: 100vw;
+    --height: 100vh;
+}
+
