@@ -10,3 +10,17 @@
     --height: 100vh;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.head{
+    height: 5rem;
+    background-image: linear-gradient(rgb(114, 89, 89), rgb(235, 235, 201));
+    text-align: center;
+    line-height: 5rem;
+}
+
+
