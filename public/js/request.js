@@ -4,9 +4,9 @@ const createXhr = (url, method, search, callback) => {
   xhr.addEventListener('readystatechange', () => {
     if (xhr.readyState === 4 && xhr.status === 200) {
       const data = JSON.parse(xhr.responseText);
-      callback(data);
+      callback(data, xhr.status);
     } else if (xhr.readyState === 4) {
-      callback(undefined);
+      callback(undefined, xhr.status);
     }
   });
   xhr.open(method, url);
