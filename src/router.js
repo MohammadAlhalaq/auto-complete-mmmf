@@ -7,11 +7,11 @@ const router = (req, res) => {
   const endpoint = req.url;
 
   const arrayPath = endpoint.split('/');
-  
+
   if (endpoint === '/') {
     handelhome(res);
   } else if (arrayPath.includes('public')) {
-    htmllink(res, endpoint);
+    htmllink(res, endpoint, arrayPath);
   }
 };
 
