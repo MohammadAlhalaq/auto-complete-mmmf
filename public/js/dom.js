@@ -5,6 +5,7 @@ const listOption = document.querySelector('#listOption');
 const randerNames = (data) => {
   const convertedData = JSON.parse(data);
 
+  listOption.textContent = '';
   convertedData.forEach((name) => {
     const option = document.createElement('option');
     option.setAttribute('value', name);
