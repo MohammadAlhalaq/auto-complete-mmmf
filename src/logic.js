@@ -1,14 +1,15 @@
 const jsonObj = require('./names');
 
 const filterData = (pharse) => {
-  const filterdData = [];
+  const filterdData = new Set();
 
   jsonObj.forEach((obj) => {
     if (obj.name.toLowerCase().startsWith(pharse.toLowerCase())) {
-      filterdData.push(obj.name);
+      filterdData.add(obj.name);
     }
   });
-  return filterdData;
+
+  return Array.from(filterdData);
 };
 
 module.exports = filterData;
