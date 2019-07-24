@@ -4,6 +4,8 @@
    0.5rem 10px 
    0.25rem 5px
 */
+
+/* default style */
 :root {
     --main-font: font-family: 'Darker Grotesque', sans-serif;
     --width: 100vw;
@@ -16,6 +18,8 @@
     box-sizing: border-box;
 }
 
+
+/* header style */
 .head{
     height: 5rem;
     background-image: linear-gradient(rgb(114, 89, 89), rgb(235, 235, 201));
@@ -24,3 +28,39 @@
 }
 
 
+/* input search style */
+.main-inputForm{
+    /* margin: auto; */
+    text-align: center;
+    margin: 5rem 0;
+}
+.inputForm-inputField{
+    padding: .6rem;
+    width: 40vw;
+    border-radius: 0.3rem;
+}
+.inputForm-searchBtn{
+    padding: 0.6rem;
+    background: none;
+    border-radius: .3rem;
+    margin-left: .5rem;
+    border: 1px solid #d6a7a7;
+    transition: .8s;
+}
+.inputForm-searchBtn:hover{
+    transform: scale(1.1) rotate(1deg);
+    background: #33149685;
+    color: white;
+    border:none;
+}
+
+
+/* main result div */
+
+.main-result{
+    margin: 0 auto;
+    text-align: center;
+    border: 1px solid #cec2c2;
+    min-height: 20vh;
+    max-width: 70vw;
+}
