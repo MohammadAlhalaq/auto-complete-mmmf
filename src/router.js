@@ -8,7 +8,6 @@ const router = (req, res) => {
 
   const arrayPath = endpoint.split('/');
   
-  console.log(endpoint);
   if (endpoint === '/') {
     handelhome(res);
   } else if (arrayPath.includes('public')) {
