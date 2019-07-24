@@ -3,6 +3,8 @@ const handelhome = require('./handlers/handelHome');
 
 const htmllink = require('./handlers/htmllinks');
 
+const handelrequests = require('./handlers/handelrequests');
+
 const router = (req, res) => {
   const endpoint = req.url;
 
@@ -12,6 +14,8 @@ const router = (req, res) => {
     handelhome(res);
   } else if (arrayPath.includes('public')) {
     htmllink(res, endpoint, arrayPath);
+  } else if (endpoint === '/name') {
+    handelrequests(req, res);
   }
 };
 
