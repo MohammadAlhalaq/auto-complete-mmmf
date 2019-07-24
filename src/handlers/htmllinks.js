@@ -2,7 +2,7 @@ const path = require('path');
 
 const fs = require('fs');
 
-const htmllink = (res, endpoint) => {
+const htmllink = (res, endpoint, arrayPath) => {
   const ext = endpoint.split('.')[1];
 
   const extType = {
@@ -14,8 +14,8 @@ const htmllink = (res, endpoint) => {
     js: 'application/javascript',
   };
 
-  const pathF = path.join(__dirname, '..', '..', ...endpoint.split('/'));
-  fs.readFile(pathF, (err, file) => {
+  const filePath = path.join(__dirname, '..', '..', ...arrayPath);
+  fs.readFile(filePath, (err, file) => {
     if (err) {
       res.writeHead(500, { 'Content-Type': 'text/html' });
       res.write('<h1>Internal Server Error</h1>');
