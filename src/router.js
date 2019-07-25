@@ -17,8 +17,8 @@ const router = (req, res) => {
   } else if (endpoint === '/name') {
     handelrequests(req, res);
   } else {
-    res.writeHead(404,{'Content-Type':'text/html' });
-    res.end("<h1>PAGE NOT FOUND 404</h1>");
+    res.writeHead(404, { 'Content-Type': 'text/html' });
+    res.end('<h1>PAGE NOT FOUND 404</h1>');
   }
 };
 
