@@ -9,7 +9,7 @@ const handelReq = (req, res) => {
     res.writeHead(200, {
       'Content-Type': 'application/Javascript',
     });
-    res.end(JSON.stringify(filterData(chunks)));
+    res.end(JSON.stringify(filterData(chunks, 'input')));
   });
 };
 

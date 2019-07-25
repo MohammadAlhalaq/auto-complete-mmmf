@@ -60,7 +60,20 @@
 .main-result{
     margin: 0 auto;
     text-align: center;
-    border: 1px solid #cec2c2;
-    min-height: 20vh;
     max-width: 70vw;
+}
+.chiledContainer{
+    margin: 1vh 0 2rem 0;
+    border: 1px solid #cec2c2;
+    padding: 1rem;
+    background: #cec2c277
+}
+.chiledContainer h4{
+    color:red;
+    margin-top: 1rem;
+
+}
+
+.chiledContainer span{
+    padding: 0 1rem;
 }

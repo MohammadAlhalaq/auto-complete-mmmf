@@ -1,15 +1,24 @@
 const jsonObj = require('./models/names');
 
-const filterData = (pharse) => {
-  const filterdData = new Set();
+const filterData = (pharse, typeEvent) => {
+  if (typeEvent === 'input') {
+    const filterdData = new Set();
+
+    jsonObj.forEach((obj) => {
+      if (obj.name.toLowerCase().startsWith(pharse.toLowerCase())) {
+        filterdData.add(obj.name);
+      }
+    });
+    return Array.from(filterdData);
+  }
+  const filterdData = [{}];
 
   jsonObj.forEach((obj) => {
     if (obj.name.toLowerCase().startsWith(pharse.toLowerCase())) {
-      filterdData.add(obj.name);
+      filterdData.push(obj);
     }
   });
-
-  return Array.from(filterdData);
+  return filterdData;
 };
 
 module.exports = filterData;
