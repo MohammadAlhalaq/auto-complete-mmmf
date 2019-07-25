@@ -1,4 +1,4 @@
-const jsonObj = require('./names');
+const jsonObj = require('./models/names');
 
 const filterData = (pharse) => {
   const filterdData = new Set();
