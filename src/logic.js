@@ -18,7 +18,9 @@ const filterData = (pharse, typeEvent) => {
       filterdData.push(obj);
     }
   });
+  
   return filterdData;
+  
 };
 
 module.exports = filterData;
